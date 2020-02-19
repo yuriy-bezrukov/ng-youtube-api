@@ -1,0 +1,9 @@
+<button 
+    *ngFor="let tab of tabs" 
+    (click)="onSelect(tab)" 
+    class="tab-item"
+    [ngClass]="{'tab-item--active': activeId === tab.id}" 
+    type="button"
+>
+  {{tab.name}}
+</button>

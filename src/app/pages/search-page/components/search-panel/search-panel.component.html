@@ -1,0 +1,7 @@
+<form [formGroup]="myForm" novalidate (ngSubmit)="submit()">
+
+        <input class="form-control" name="q" formControlName="q" placeholder="search..." />
+        <button class="btn btn-default" [disabled]="myForm.invalid">
+            Search
+        </button>
+</form>

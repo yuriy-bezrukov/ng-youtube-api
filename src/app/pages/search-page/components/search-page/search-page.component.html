@@ -1,0 +1,20 @@
+<app-tabs [tabs]="tabs" (select)="onTabSelect($event)"></app-tabs>
+
+<app-search-panel (search)="onSearchByText($event)"></app-search-panel>
+
+<div class="video-wrapper">
+    <div class="video-item" *ngFor="let video of videos">
+        <div class="video-image">
+            <img [src]="video.snippet.thumbnails.medium.url">
+        </div>
+        <div class="video-title">
+            {{video.snippet.title}}
+        </div>
+        <div (click)="toggleFavorites(video)" [ngClass]="{'video-favorite-active': isFavorites(video)}" class="video-favorite">★</div>
+    </div>
+</div>
+
+<div class="navigation-buttons">
+    <button (click)="prevVideo()" *ngIf="canPrev" type="button">Prev</button>
+    <button (click)="nextVideo()" *ngIf="canNext" type="button">Next</button>
+</div>
