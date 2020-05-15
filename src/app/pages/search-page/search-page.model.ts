@@ -1,4 +1,4 @@
-import { ITab } from 'src/app/shared/modules/tabs/tabs.model';
+import { ITab } from '../../shared/modules/tabs/tabs.model';
 
 export enum Tab {
     all = 'all',

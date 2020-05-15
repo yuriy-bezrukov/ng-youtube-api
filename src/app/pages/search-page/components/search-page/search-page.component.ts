@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, OnDestroy } from '@angular/core';
 import { Tabs, Tab } from '../../search-page.model';
-import { ITab } from 'src/app/shared/modules/tabs/tabs.model';
+import { ITab } from '../../../../shared/modules/tabs/tabs.model';
 import { SearchPageService, SearchPageActions } from '../../service/search-page/search-page.service';
 import { takeUntil } from 'rxjs/operators';
 import { IYoutubeVideo, IDVideo } from '../../service/youtube/youtube.model';
